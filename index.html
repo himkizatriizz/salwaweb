@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEMPA — Mekanisme Terjadinya Gempa Bumi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#beranda">GEMPA</a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="#apa-itu">Apa Itu</a>
+      <a href="#mekanisme">Mekanisme</a>
+      <a href="#lempeng">Lempeng</a>
+      <a href="#gelombang">Gelombang</a>
+      <a href="#mitigasi">Mitigasi</a>
+      <a href="#kuis">Kuis</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="fault-line"></div>
+        <div class="fault-line fault-line--2"></div>
+        <div class="ripple ripple--1"></div>
+        <div class="ripple ripple--2"></div>
+        <div class="ripple ripple--3"></div>
+      </div>
+      <div class="hero-content">
+        <p class="brand">GEMPA</p>
+        <h1>Bagaimana bumi bergetar dari dalam</h1>
+        <p class="hero-lead">Media interaktif yang menjelaskan mekanisme terjadinya gempa bumi secara sederhana dan visual.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#mekanisme">Lihat Mekanisme</a>
+          <a class="btn btn-ghost" href="#apa-itu">Pelajari Dasar</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apa-itu">
+      <div class="section-inner">
+        <p class="eyebrow">Dasar pemahaman</p>
+        <h2>Apa itu gempa bumi?</h2>
+        <p class="section-lead">Gempa bumi adalah getaran di permukaan bumi yang terjadi karena pelepasan energi secara tiba-tiba di dalam kerak bumi.</p>
+
+        <div class="info-grid">
+          <article class="info-block">
+            <h3>Energi tersimpan</h3>
+            <p>Tekanan antar lempeng tektonik menumpuk perlahan di sepanjang sesar (patahan).</p>
+          </article>
+          <article class="info-block">
+            <h3>Pelepasan mendadak</h3>
+            <p>Ketika batuan tidak lagi mampu menahan tekanan, energi dilepaskan sebagai gelombang seismik.</p>
+          </article>
+          <article class="info-block">
+            <h3>Getaran di permukaan</h3>
+            <p>Gelombang menjalar ke segala arah dan kita rasakan sebagai guncangan di tanah.</p>
+          </article>
+        </div>
+
+        <div class="focus-panel">
+          <div class="focus-diagram" aria-hidden="true">
+            <div class="ground-line"></div>
+            <div class="focus-house"></div>
+            <span class="focus-dot focus-dot--epi"></span>
+            <span class="focus-dot focus-dot--hypo"></span>
+            <span class="focus-line"></span>
+            <span class="focus-label focus-label--epi">Episentrum</span>
+            <span class="focus-label focus-label--hypo">Hiposentrum</span>
+          </div>
+          <div class="focus-copy">
+            <h3>Hiposentrum &amp; Episentrum</h3>
+            <p><strong>Hiposentrum</strong> adalah titik di dalam bumi tempat energi gempa dilepaskan.</p>
+            <p><strong>Episentrum</strong> adalah titik di permukaan bumi tepat di atas hiposentrum — biasanya lokasi guncangan terkuat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="mekanisme">
+      <div class="section-inner">
+        <p class="eyebrow">Simulasi interaktif</p>
+        <h2>Mekanisme terjadinya gempa</h2>
+        <p class="section-lead">Tekan tombol di bawah untuk melihat tahapan terbentuknya gempa langkah demi langkah.</p>
+
+        <div class="sim-panel">
+          <div class="sim-stage" id="sim-stage" aria-live="polite">
+            <div class="earth-slice">
+              <div class="crust crust--left" id="plate-left"></div>
+              <div class="crust crust--right" id="plate-right"></div>
+              <div class="stress-zone" id="stress-zone"></div>
+              <div class="epicenter" id="epicenter"></div>
+              <div class="wave-ring" id="wave-ring"></div>
+            </div>
+            <p class="sim-caption" id="sim-caption">Siap memulai. Tekan “Jalankan Simulasi”.</p>
+          </div>
+
+          <div class="sim-controls">
+            <button class="btn btn-primary" type="button" id="btn-sim">Jalankan Simulasi</button>
+            <button class="btn btn-ghost" type="button" id="btn-reset">Ulangi</button>
+          </div>
+
+          <ol class="step-list" id="step-list">
+            <li data-step="1">Lempeng saling bergesekan dan tekanan meningkat.</li>
+            <li data-step="2">Energi elastis menumpuk di zona sesar.</li>
+            <li data-step="3">Batuan patah — energi dilepaskan mendadak.</li>
+            <li data-step="4">Gelombang seismik menjalar dan mengguncang permukaan.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lempeng">
+      <div class="section-inner">
+        <p class="eyebrow">Batas lempeng tektonik</p>
+        <h2>Tiga cara lempeng saling bergerak</h2>
+        <p class="section-lead">Sebagian besar gempa terjadi di batas lempeng. Pilih jenis batas untuk melihat ilustrasinya.</p>
+
+        <div class="tabs" role="tablist" aria-label="Jenis batas lempeng">
+          <button class="tab is-active" role="tab" aria-selected="true" data-plate="konvergen">Konvergen</button>
+          <button class="tab" role="tab" aria-selected="false" data-plate="divergen">Divergen</button>
+          <button class="tab" role="tab" aria-selected="false" data-plate="transform">Transform</button>
+        </div>
+
+        <div class="plate-viewer">
+          <canvas id="plate-canvas" width="720" height="320" aria-label="Animasi batas lempeng"></canvas>
+          <div class="plate-copy">
+            <h3 id="plate-title">Batas Konvergen</h3>
+            <p id="plate-desc">Dua lempeng saling mendekat dan bertabrakan. Salah satu lempeng dapat menyusup (subduksi) dan memicu gempa kuat serta gunung api.</p>
+            <ul id="plate-points">
+              <li>Contoh: zona subduksi di sekitar Indonesia</li>
+              <li>Sering menghasilkan gempa dalam dan dangkal</li>
+              <li>Berpotensi memicu tsunami jika terjadi di laut</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="gelombang">
+      <div class="section-inner">
+        <p class="eyebrow">Gelombang seismik</p>
+        <h2>Dari hiposentrum ke permukaan</h2>
+        <p class="section-lead">Titik pelepasan energi di dalam bumi disebut hiposentrum. Titik di permukaan tepat di atasnya disebut episentrum.</p>
+
+        <div class="wave-grid">
+          <article class="wave-card" data-wave="p">
+            <div class="wave-visual" aria-hidden="true">
+              <span class="pulse-bar"></span>
+              <span class="pulse-bar"></span>
+              <span class="pulse-bar"></span>
+              <span class="pulse-bar"></span>
+              <span class="pulse-bar"></span>
+            </div>
+            <h3>Gelombang P</h3>
+            <p>Gelombang primer — tercepat, merapat-merenggang. Biasanya tiba lebih dulu.</p>
+          </article>
+          <article class="wave-card" data-wave="s">
+            <div class="wave-visual wave-visual--s" aria-hidden="true">
+              <span class="shear-dot"></span>
+              <span class="shear-dot"></span>
+              <span class="shear-dot"></span>
+              <span class="shear-dot"></span>
+              <span class="shear-dot"></span>
+            </div>
+            <h3>Gelombang S</h3>
+            <p>Gelombang sekunder — lebih lambat, bergerak naik-turun atau kiri-kanan. Lebih merusak.</p>
+          </article>
+          <article class="wave-card" data-wave="surface">
+            <div class="wave-visual wave-visual--surface" aria-hidden="true">
+              <svg viewBox="0 0 120 40" preserveAspectRatio="none">
+                <path class="surface-path" d="M0 20 Q15 5 30 20 T60 20 T90 20 T120 20" fill="none" stroke="currentColor" stroke-width="2.5" />
+              </svg>
+            </div>
+            <h3>Gelombang permukaan</h3>
+            <p>Berjalan di sepanjang permukaan bumi. Biasanya menimbulkan kerusakan terbesar.</p>
+          </article>
+        </div>
+
+        <div class="seismo">
+          <p class="seismo-label">Ilustrasi seismograf</p>
+          <canvas id="seismo-canvas" width="900" height="120" aria-label="Animasi garis seismograf"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mitigasi">
+      <div class="section-inner">
+        <p class="eyebrow">Siaga bencana</p>
+        <h2>Mitigasi: apa yang harus dilakukan?</h2>
+        <p class="section-lead">Memahami mekanisme gempa penting, tapi mengetahui cara melindungi diri juga sama pentingnya.</p>
+
+        <div class="mitigasi-tabs" role="tablist" aria-label="Tahap mitigasi">
+          <button class="tab is-active" type="button" data-mitigasi="sebelum" aria-selected="true">Sebelum</button>
+          <button class="tab" type="button" data-mitigasi="saat" aria-selected="false">Saat terjadi</button>
+          <button class="tab" type="button" data-mitigasi="sesudah" aria-selected="false">Sesudah</button>
+        </div>
+
+        <div class="mitigasi-panel" id="mitigasi-panel">
+          <h3 id="mitigasi-title">Sebelum gempa</h3>
+          <ul id="mitigasi-list">
+            <li>Kenali jalur evakuasi di rumah, sekolah, dan tempat kerja.</li>
+            <li>Siapkan tas siaga: air, obat, senter, dokumen penting.</li>
+            <li>Amankan furnitur berat agar tidak mudah jatuh.</li>
+            <li>Ikuti latihan gempa secara rutin.</li>
+          </ul>
+        </div>
+
+        <div class="glossary">
+          <h3>Glosarium singkat</h3>
+          <dl>
+            <div><dt>Sesar</dt><dd>Patahan di kerak bumi tempat batuan saling bergeser.</dd></div>
+            <div><dt>Subduksi</dt><dd>Proses satu lempeng menyusup di bawah lempeng lain.</dd></div>
+            <div><dt>Magnitudo</dt><dd>Ukuran besar energi yang dilepaskan saat gempa.</dd></div>
+            <div><dt>Intensitas</dt><dd>Tingkat dampak getaran yang dirasakan di suatu tempat.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="kuis">
+      <div class="section-inner narrow">
+        <p class="eyebrow">Uji pemahaman</p>
+        <h2>Kuis singkat</h2>
+        <p class="section-lead">Jawab beberapa pertanyaan untuk menguji pemahamanmu tentang mekanisme gempa.</p>
+
+        <div class="quiz" id="quiz">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar" id="quiz-bar"></div>
+          </div>
+          <p class="quiz-count" id="quiz-count">Soal 1 dari 4</p>
+          <h3 class="quiz-question" id="quiz-question"></h3>
+          <div class="quiz-options" id="quiz-options"></div>
+          <p class="quiz-feedback" id="quiz-feedback" hidden></p>
+          <button class="btn btn-primary" type="button" id="quiz-next" hidden>Soal berikutnya</button>
+          <div class="quiz-result" id="quiz-result" hidden>
+            <p id="quiz-score"></p>
+            <button class="btn btn-primary" type="button" id="quiz-restart">Ulangi kuis</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>GEMPA</strong> — media pembelajaran mekanisme gempa bumi.</p>
+    <p class="footer-note">Dibuat dengan HTML, CSS, dan JavaScript untuk keperluan edukasi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
